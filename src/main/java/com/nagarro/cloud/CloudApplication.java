@@ -27,7 +27,10 @@ public class CloudApplication {
 	        return bookRepository.findAll();
 	    }
 
-
+	    @GetMapping("/message")
+	    public String message() {
+	        return "Welcome to First Azure Deployment";
+	    }
 	   
 	    @GetMapping("/{id}")
 	    public Book findBook(@PathVariable int id) throws Exception {
